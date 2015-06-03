@@ -12,10 +12,14 @@ gem "sass-rails"
 gem "bootstrap-sass"
 gem "uglifier"
 gem "coffee-rails"
+gem "carrierwave"
+gem "mini_magick"
+gem "fog"
+gem "remotipart"
 gem "jquery-rails"
 gem "turbolinks"
 gem "jbuilder"
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw]
 
 group :development do
   gem "factory_girl_rails"

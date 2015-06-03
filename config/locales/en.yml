@@ -28,6 +28,7 @@ en:
   title: "Title"
   author: "Author"
   description: "Description"
+  ISBN: "ISBN"
   actions: "Actions"
   success: "Successfully!!"
   fail: "Unsuccessfully!!"

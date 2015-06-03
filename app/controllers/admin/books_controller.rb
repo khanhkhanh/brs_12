@@ -1,4 +1,5 @@
 class Admin::BooksController < ApplicationController
+  skip_before_action :verify_authenticity_token
   load_and_authorize_resource
 
   def index
@@ -46,6 +47,6 @@ class Admin::BooksController < ApplicationController
 
   private
   def book_params
-    params.require(:book).permit :title, :author, :description
+    params.require(:book).permit :title, :author, :description, :picture
   end
 end

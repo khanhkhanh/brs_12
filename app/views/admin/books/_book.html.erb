@@ -1,7 +1,10 @@
 <tr id="book_<%= book.id %>">
   <td><%= book.title %></td>
   <td><%= book.author %></td>
-  <td><%= book.description %></td>
+  <td>
+  	<%= book.description %>
+  	<%= image_tag book.picture.url if book.picture? %>
+  </td>
   <td>
     <%= link_to t(:details_link), book_path(book) %>
 
