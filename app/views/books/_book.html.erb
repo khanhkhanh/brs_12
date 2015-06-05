@@ -22,4 +22,11 @@
       <% end %>
     </div>
   </td>
+  <td>
+    <div id="reading-<%= book.id %>">
+      <% unless current_user.nil? %>
+        <%= render "readings/reading", book: book %>
+      <% end %>
+    </div>
+  </td>
 </tr>

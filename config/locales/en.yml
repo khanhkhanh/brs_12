@@ -49,6 +49,10 @@ en:
   list: "Favorite Books"
   books: "Books"
   books_list: "List Of Favorite Books"
+  unread_button: "Unread"
+  read_button: "Read"
+  reading_button: "Reading"
+  marking_actions: "Mark a book as"
 
 category:
   notice:

@@ -12,6 +12,7 @@ class Ability
       can :read, User
       can [:create, :destroy], Relationship
       can [:create, :destroy], Perusal
+      can [:create, :edit, :destroy], Reading
     end
   end
 end

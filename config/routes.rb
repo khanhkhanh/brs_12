@@ -17,6 +17,10 @@ Rails.application.routes.draw do
     end
   end
   
+  resources :relationships, only: [:create, :destroy]
+  resources :perusals, only: [:create, :destroy]
+  resources :readings, except: [:show, :new, :update]
+
   devise_scope :user do
     get "/login" => "devise/sessions#new"
     get "/logout" => "devise/sessions#destroy"

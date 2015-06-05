@@ -1,0 +1,1 @@
+$("#reading-<%= @book.id %>").html("<%= escape_javascript(render "readings/reading", book: @book) %>");

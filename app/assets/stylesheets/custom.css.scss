@@ -213,17 +213,24 @@ span.picture {
   }
 }
 
-/* favorite/unfavorite buttons */
+/* Some buttons */
 
-.favorite {
+.btn-favorite {
   width: 100px;
-  background-color: GreenYellow;
+  background-color: DarkOrange;
   color: Navy;
+  &:hover {
+    background-color: DarkOrange;
+    color: Navy;
+  }
 }
 
-.unfavorite {
+.btn-unfavorite {
   width: 100px;
   background-color: SlateGray;
+  &:hover {
+    background-color: SlateGray;
+  }
 }
 
 .btn-follow {
@@ -232,12 +239,47 @@ span.picture {
 
 .btn-unfollow {
   width: 100px;
-  background-color: DarkSlateGray;
+  background-color: SlateGray;
+  &:hover {
+    background-color: SlateGray;
+  }
 }
 
 .btn-favorite-books {
   background-color: DarkOrange;
   color: DarkGreen;
+  &:hover {
+    background-color: DarkOrange;
+    color: DarkGreen;
+  }
+}
+
+.btn-read {
+  width: 80px;
+  background-color: Peru;
+  color: DarkGreen;
+  &:hover {
+    background-color: Peru;
+    color: DarkGreen;
+  }
+}
+
+.btn-reading {
+  width: 80px;
+  background-color: LightGreen;
+  color: Blue;
+  &:hover {
+    background-color: LightGreen;
+    color: Blue;
+  }
+}
+
+.btn-unread {
+  width: 80px;
+  background-color: SlateGray;
+  &:hover {
+    background-color: SlateGray;
+  }
 }
 
 .btn-hidden {
@@ -251,6 +293,7 @@ span.picture {
 thead {
   height: 40px;
 }
+
 .activities {
   list-style: none;
   padding: 0;

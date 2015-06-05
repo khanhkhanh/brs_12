@@ -1,0 +1,54 @@
+<% if record = current_user.find_reading(book) %>
+
+  <%= link_to t(:reading_button), edit_reading_path(record, behaviour: Settings.book.reading), remote: true,
+    class: record.reading? ? "btn btn-primary btn-reading btn-hidden" : "btn btn-primary btn-reading" %>
+
+  <%= link_to t(:read_button), edit_reading_path(record, behaviour: Settings.book.read), remote: true,
+    class: record.read? ? "btn btn-primary btn-read btn-hidden" : "btn btn-primary btn-read" %>
+
+  <%= link_to t(:unread_button), reading_path(record), method: :delete, remote: true,
+    class: "btn btn-primary btn-unread" %>
+
+<% else %>
+
+  <%= link_to t(:reading_button), readings_path(book_id: book.id, behaviour: Settings.book.reading),
+    method: :post, remote: true, class: "btn btn-primary btn-reading" %>
+
+  <%= link_to t(:read_button), readings_path(book_id: book.id, behaviour: Settings.book.read),
+    method: :post, remote: true, class: "btn btn-primary btn-read" %>
+
+  <%= link_to t(:unread_button), "#", class: "btn btn-primary btn-unread btn-hidden" %>
+
+<% end %>
+
+<%# if current_user.reading? book %>
+
+  <%#= link_to t(:read_button), edit_reading_path(current_user.find_reading(book),
+    behaviour: Settings.book.read), remote: true, class: "btn btn-primary btn-read" %>
+
+  <%#= link_to t(:reading_button), "#", class: "btn btn-primary btn-reading btn-hidden" %>
+
+  <%#= link_to t(:unread_button), reading_path(current_user.find_reading book),
+    method: :delete, remote: true, class: "btn btn-primary btn-unread" %>
+
+<%# elsif current_user.read? book %>
+
+  <%#= link_to t(:read_button), "#", class: "btn btn-primary btn-read btn-hidden" %>
+
+  <%#= link_to t(:reading_button), edit_reading_path(current_user.find_reading(book),
+    behaviour: Settings.book.reading), remote: true, class: "btn btn-primary btn-reading" %>
+
+  <%#= link_to t(:unread_button), reading_path(current_user.find_reading book),
+    method: :delete, remote: true, class: "btn btn-primary btn-unread" %>
+
+<%# else %>
+
+  <%#= link_to t(:read_button), readings_path(book_id: book.id, behaviour: Settings.book.read),
+    method: :post, remote: true, class: "btn btn-primary btn-read" %>
+
+  <%#= link_to t(:reading_button), readings_path(book_id: book.id, behaviour: Settings.book.reading),
+    method: :post, remote: true, class: "btn btn-primary btn-reading" %>
+
+  <%#= link_to t(:unread_button), "#", class: "btn btn-primary btn-unread btn-hidden" %>
+
+<%# end %>
